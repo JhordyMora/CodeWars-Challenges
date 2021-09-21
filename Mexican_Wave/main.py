@@ -10,16 +10,16 @@
 
 def wave(word: str) -> list:
     letter_list = [letter for letter in word]
-    letter_list2 = letter_list.copy()
-    new_list = []
+    letter_list_copied = letter_list.copy()
+    wave_list = []
     for index in range(len(letter_list)):
         if letter_list[index] == " ":
             continue
         nueva_letra = letter_list[index].upper()
-        letter_list2[index] = nueva_letra
-        new_list.append("".join(letter_list2))
-        letter_list2 = letter_list.copy()
-    return new_list
+        letter_list_copied[index] = nueva_letra
+        wave_list.append("".join(letter_list_copied))
+        letter_list_copied = letter_list.copy()
+    return wave_list
 
 
 if __name__ == '__main__':
